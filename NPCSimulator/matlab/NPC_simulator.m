@@ -30,7 +30,7 @@ plot(NPCLocation(1), NPCLocation(2),'or','markerfacecolor','r','markersize',10);
 
 tic;
 
-%parfor iSample=1:NSample
+% parfor iSample=1:NSample
 for iSample=1:NSample
     
     % intial condition
@@ -56,16 +56,16 @@ for iSample=1:NSample
         end
         
         % test for NPC capture
-        if ( (x(1)-NPCLocation(1))^2 + (x(2)-NPCLocation(2))^2 < NPCSize^2 )
+        if ((x(1)-NPCLocation(1))^2 + (x(2)-NPCLocation(2))^2) < NPCSize^2
             tCapture(iSample) = t;
             break;
         end
         
-        if 1 % visualize
-            figure(1);
-            plot(x(1),x(2),'-ob');
-            drawnow;
-        end % finished visualization
+        %if 1 % visualize
+        %    figure(1);
+        %    plot(x(1),x(2),'-ob');
+        %    drawnow;
+        %end % finished visualization
         
         t = t+dt;
         

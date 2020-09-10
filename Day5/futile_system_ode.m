@@ -60,7 +60,7 @@ Itot = 100; % µM
 I_0 = Itot; % µM
 y0 = [A_0 AP_0 I_0 K_0]; % A, AP, I, IK
 
-n_steps = 50;
+n_steps = 101;
 kspan = logspace(-3, 2, n_steps);
 A_all = zeros(n_steps,1);
 A_only = zeros(n_steps,1);
